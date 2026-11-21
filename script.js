@@ -206,6 +206,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
       const isNameValid = validateField(nameInput, nameInput.value.trim().length >= 2);
@@ -214,32 +216,33 @@ document.addEventListener('DOMContentLoaded', () => {
       const isMessageValid = validateField(messageInput, messageInput.value.trim().length >= 10);
 
       if (!isNameValid || !isEmailValid || !isSubjectValid || !isMessageValid) {
-        e.preventDefault();
         showToast('Validation Error', 'Please complete all required fields correctly.', false);
-      } else {
-        // Allow standard POST submission to FormSubmit so it sends real email directly to sayandhana1234@gmail.com
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending to Email...</span>';
+        return;
       }
-    });
 
-    // --- 7. Compose in Gmail Directly Button ---
-    const gmailBtn = document.getElementById('gmail-direct-btn');
-    if (gmailBtn) {
-      gmailBtn.addEventListener('click', () => {
-        const subject = encodeURIComponent(subjectInput.value.trim() || 'Inquiry from Portfolio');
-        let bodyText = messageInput.value.trim();
-        if (nameInput.value.trim() || emailInput.value.trim()) {
-          bodyText += `\n\n---\nSent by: ${nameInput.value.trim()} (${emailInput.value.trim()})`;
-        }
-        const body = encodeURIComponent(bodyText);
-        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=sayandhana1234@gmail.com&su=${subject}&body=${body}`;
-        window.open(gmailUrl, '_blank');
-      });
-    }
+      // Format message body
+      const subject = encodeURIComponent(subjectInput.value.trim() || 'Portfolio Inquiry');
+      const bodyText = `Hi Sayandhana,\n\n${messageInput.value.trim()}\n\n---\nSent by: ${nameInput.value.trim()}\nEmail: ${emailInput.value.trim()}`;
+      const body = encodeURIComponent(bodyText);
+
+      // 1. Direct Gmail Web Compose link
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=sayandhana1234@gmail.com&su=${subject}&body=${body}`;
+      
+      // Open in Gmail directly
+      const newTab = window.open(gmailUrl, '_blank');
+
+      // 2. Fallback mailto trigger for users without Gmail active
+      if (!newTab || newTab.closed || typeof newTab.closed === 'undefined') {
+        window.location.href = `mailto:sayandhana1234@gmail.com?subject=${subject}&body=${body}`;
+      }
+
+      // Feedback & reset
+      showToast('Opening Email...', 'Pre-filling your message to sayandhana1234@gmail.com! Just hit Send in Gmail.', true);
+      contactForm.reset();
+    });
   }
 
-  // --- 8. Email Click Helper: Open Gmail Web & Copy Address ---
+  // --- 7. Email Click Helper: Open Gmail Web & Copy Address ---
   const emailLinks = document.querySelectorAll('.email-click-link');
   emailLinks.forEach(link => {
     link.addEventListener('click', () => {

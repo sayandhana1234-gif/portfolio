@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sayandhana KS | Portfolio - Computer Science & AI Graduate</title>
   <meta name="description" content="Portfolio of Sayandhana KS - B.Tech Computer Science and Engineering graduate specializing in Artificial Intelligence, Machine Learning, Python, and IoT. Based in Palakkad, Kerala." />
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  
+
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  
+
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -478,7 +478,7 @@
                   <i class="fa-solid fa-envelope"></i>
                 </div>
                 <div class="info-content">
-                  <span class="info-label">Email (Click to Open Gmail)</span>
+                  <span class="info-label">Email</span>
                   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sayandhana1234@gmail.com" target="_blank" rel="noopener noreferrer" class="info-value email-click-link" title="Open Gmail with this address">sayandhana1234@gmail.com</a>
                 </div>
               </div>
@@ -519,7 +519,7 @@
                 </div>
                 <div class="info-content">
                   <span class="info-label">Location</span>
-                  <span class="info-value">Palakkad, Kerala, India (Open to Relocation & Remote)</span>
+                  <span class="info-value">Palakkad, Kerala, India (Open to Relocation &amp; Remote)</span>
                 </div>
               </div>
             </div>
@@ -535,122 +535,62 @@
             </div>
           </div>
 
-          <!-- Right: Contact Form -->
-          <div class="contact-form-panel">
-            <form id="contact-form" class="contact-form" action="https://formsubmit.co/sayandhana1234@gmail.com" method="POST" novalidate>
-              <!-- FormSubmit configuration: real email delivery to sayandhana1234@gmail.com -->
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_subject" value="New Portfolio Contact Message for Sayandhana KS" />
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Your Name <span class="required">*</span></label>
-                  <div class="input-container">
-                    <i class="fa-regular fa-user input-icon"></i>
-                    <input type="text" id="name" name="name" placeholder="Recruiter / Hiring Manager" required />
-                  </div>
-                  <span class="error-msg" id="name-error">Please enter your name</span>
-                </div>
-
-                <div class="form-group">
-                  <label for="email">Your Email <span class="required">*</span></label>
-                  <div class="input-container">
-                    <i class="fa-regular fa-envelope input-icon"></i>
-                    <input type="email" id="email" name="email" placeholder="hr@company.com" required />
-                  </div>
-                  <span class="error-msg" id="email-error">Please enter a valid email address</span>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="subject">Subject <span class="required">*</span></label>
-                <div class="input-container">
-                  <i class="fa-regular fa-bookmark input-icon"></i>
-                  <input type="text" id="subject" name="subject" placeholder="Job Opportunity / Interview Invitation" required />
-                </div>
-                <span class="error-msg" id="subject-error">Please enter a subject</span>
-              </div>
-
-              <div class="form-group">
-                <label for="message">Message <span class="required">*</span></label>
-                <div class="input-container textarea-container">
-                  <i class="fa-regular fa-comment-dots input-icon textarea-icon"></i>
-                  <textarea id="message" name="message" rows="5" placeholder="Write your message, role details, or inquiry..." required></textarea>
-                </div>
-                <span class="error-msg" id="message-error">Please enter your message (at least 10 characters)</span>
-              </div>
-
-              <div class="form-actions-group">
-                <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
-                  <span>Send Message Directly</span>
-                  <i class="fa-solid fa-paper-plane"></i>
-                </button>
-                <button type="button" id="gmail-direct-btn" class="btn btn-secondary btn-block">
-                  <i class="fa-solid fa-envelope-open-text"></i>
-                  <span>Or Open in Gmail</span>
-                </button>
-              </div>
-            </form>
-          </div>
         </div>
       </div>
     </section>
-  </main>
 
-  <!-- Notification Toast -->
-  <div id="toast" class="toast">
-    <i class="fa-solid fa-circle-check toast-icon"></i>
-    <div class="toast-content">
-      <strong id="toast-title">Message Sent!</strong>
-      <p id="toast-message">Thank you! Sayandhana will get back to you shortly.</p>
-    </div>
-  </div>
-
-  <!-- Back to Top Button -->
-  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="#hero" class="brand-logo">
-            Sayandhana KS
-          </a>
-          <p class="footer-motto">
-            B.Tech in Computer Science & Artificial Intelligence Graduate | Palakkad, Kerala.
-          </p>
-        </div>
-
-        <div class="footer-nav">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About & Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-contact-summary">
-          <h4>Get In Touch</h4>
-          <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=sayandhana1234@gmail.com" target="_blank" rel="noopener noreferrer" class="email-click-link" style="color: inherit;"><i class="fa-solid fa-envelope"></i> sayandhana1234@gmail.com</a></p>
-          <p><i class="fa-solid fa-phone"></i> +91-7034774514</p>
-          <p><i class="fa-solid fa-location-dot"></i> Palakkad, Kerala, India</p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; <span id="current-year"></span> Sayandhana KS. All rights reserved.</p>
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">
+      <i class="fa-solid fa-circle-check toast-icon"></i>
+      <div class="toast-content">
+        <strong id="toast-title">Message Sent!</strong>
+        <p id="toast-message">Thank you! Sayandhana will get back to you shortly.</p>
       </div>
     </div>
-  </footer>
 
-  <!-- Custom JavaScript -->
-  <script src="script.js"></script>
-</body>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#hero" class="brand-logo">Sayandhana KS</a>
+            <p class="footer-motto">
+              B.Tech in Computer Science &amp; Artificial Intelligence Graduate | Palakkad, Kerala.
+            </p>
+          </div>
+
+          <div class="footer-nav">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About &amp; Education</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#certifications">Certifications</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact-summary">
+            <h4>Get In Touch</h4>
+            <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=sayandhana1234@gmail.com" target="_blank" rel="noopener noreferrer" class="email-click-link" style="color: inherit;"><i class="fa-solid fa-envelope"></i> sayandhana1234@gmail.com</a></p>
+            <p><i class="fa-solid fa-phone"></i> +91-7034774514</p>
+            <p><i class="fa-solid fa-location-dot"></i> Palakkad, Kerala, India</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; <span id="current-year"></span> Sayandhana KS. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+  </body>
 </html>

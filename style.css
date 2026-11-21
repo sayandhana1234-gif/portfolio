@@ -386,6 +386,10 @@ body.light-theme .navbar {
 
 .hero-container {
   display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  justify-items: center;
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
   gap: 3.5rem;
@@ -544,6 +548,10 @@ body.light-theme .navbar {
 
 .timeline-grid {
   display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  justify-items: center;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
@@ -672,6 +680,10 @@ body.light-theme .navbar {
   border-radius: var(--radius-md);
   padding: 1.25rem 1.6rem;
   display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  justify-items: center;
   grid-template-columns: 240px 1fr;
   align-items: center;
   gap: 1.5rem;
@@ -735,6 +747,10 @@ body.light-theme .navbar {
 
 .projects-grid-two {
   display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 2.25rem;
 }
@@ -869,6 +885,10 @@ body.light-theme .navbar {
 
 .cert-grid {
   display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.75rem;
   margin-bottom: 3.5rem;
@@ -1036,10 +1056,11 @@ body.light-theme .navbar {
 }
 
 .contact-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 3.5rem;
+  display: flex;
+  justify-content: center;
   align-items: flex-start;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .contact-info-panel {
@@ -1047,6 +1068,7 @@ body.light-theme .navbar {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: 2.5rem;
+  width: 100%;
 }
 
 .panel-title {
@@ -1168,6 +1190,10 @@ body.light-theme .navbar {
 
 .form-row {
   display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  justify-items: center;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
 }
@@ -1347,6 +1373,10 @@ body.light-theme .navbar {
 
 .footer-top {
   display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  justify-items: center;
   grid-template-columns: 2fr 1fr 1.2fr;
   gap: 3rem;
   margin-bottom: 2.5rem;
@@ -1445,9 +1475,7 @@ body.light-theme .navbar {
     gap: 0.75rem;
   }
 
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-  }
+
 
   .footer-top {
     grid-template-columns: 1fr 1fr;
