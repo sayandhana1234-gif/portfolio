@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sayandhana KS | Portfolio - AI Specialist & Python Django Developer</title>
+  <meta name="description"
+    content="Portfolio of Sayandhana KS - Computer Science and Engineering graduate specializing in Artificial Intelligence, Machine Learning, Python Django, and IoT." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-accent">&lt;</span>Sayandhana KS<span class="logo-accent">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About & Edu</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <a href="#contact" class="btn btn-sm btn-primary hide-mobile">Get In Touch</a>
+
+        <!-- Hamburger Button -->
+        <button id="hamburger" class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="status-dot"></span> B.Tech CSE in Artificial Intelligence &bull; Open to Roles
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Sayandhana KS</span><br />
+            Specializing in <span class="typewriter" id="typewriter"></span>
+          </h1>
+
+          <p class="hero-description">
+            Computer Science and Engineering graduate specializing in Artificial Intelligence. Passionate about machine
+            learning, deep learning, Python Django backend systems, and smart IoT solutions that solve challenging
+            real-world problems.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="mailto:sayandhana1234@gmail.com" class="btn btn-outline" id="download-cv">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Request CV</span>
+            </a>
+          </div>
+
+          <div class="social-links">
+            <span class="social-label">Quick Connect:</span>
+            <a href="https://linkedin.com/in/sayandhana-ks" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn" title="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:sayandhana1234@gmail.com" aria-label="Email" title="sayandhana1234@gmail.com"><i
+                class="fa-solid fa-envelope"></i></a>
+            <a href="tel:+917034774514" aria-label="Phone" title="+91-7034774514"><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="code-card-wrapper">
+            <div class="glow-orb orb-1"></div>
+            <div class="glow-orb orb-2"></div>
+
+            <div class="glass-card code-card">
+              <div class="card-header">
+                <div class="dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="card-title">Sayandhana_Profile.py</div>
+              </div>
+              <div class="card-body">
+                <pre><code><span class="keyword">class</span> <span class="variable">AIEngineer</span>:
+  <span class="property">name</span> = <span class="string">"Sayandhana KS"</span>
+  <span class="property">degree</span> = <span class="string">"B.Tech CSE (AI)"</span>
+  <span class="property">cgpa</span> = <span class="string">"8.05 / 10"</span>
+  <span class="property">primary_stack</span> = [<span class="string">"Python"</span>, <span class="string">"Django"</span>, <span class="string">"TensorFlow"</span>]
+  <span class="property">research_focus</span> = [<span class="string">"NLP"</span>, <span class="string">"Speech Recognition"</span>, <span class="string">"IoT"</span>]
+
+  <span class="keyword">def</span> <span class="function">innovate</span>(<span class="param">self</span>):
+    <span class="keyword">return</span> <span class="string">"Building AI solutions for real-world impact 🚀"</span></code></pre>
+              </div>
+            </div>
+
+            <!-- Floating Stat Badges -->
+            <div class="floating-badge badge-top">
+              <i class="fa-solid fa-brain"></i>
+              <div>
+                <strong>AI & Deep Learning</strong>
+                <span>TensorFlow &bull; BERT &bull; Wav2Vec2</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <div>
+                <strong>B.Tech Graduate</strong>
+                <span>CGPA 8.05 / 10 &bull; ASIET Kalady</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Education Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Background</span>
+          <h2 class="section-title">About & <span class="gradient-text">Education</span></h2>
+          <p class="section-subtitle">
+            An overview of my academic foundation, professional internship experience, and career trajectory.
+          </p>
+        </div>
+
+        <div class="timeline-grid">
+          <!-- Education Card -->
+          <div class="timeline-card">
+            <div class="timeline-badge-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">Graduation</span>
+              <h3 class="timeline-heading">B.Tech in Computer Science & Artificial Intelligence</h3>
+              <p class="timeline-subheading">Adi Shankara College of Engineering and Technology &bull; Kalady, Kerala
+              </p>
+              <div class="grade-pill"><i class="fa-solid fa-award"></i> CGPA: 8.05 / 10</div>
+              <p class="timeline-text">
+                Specialized in Artificial Intelligence, Machine Learning algorithms, Data Structures, and Software
+                Engineering principles with high academic standing.
+              </p>
+            </div>
+          </div>
+
+          <!-- Experience Card -->
+          <div class="timeline-card">
+            <div class="timeline-badge-icon icon-experience">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">June 2024 – July 2024</span>
+              <h3 class="timeline-heading">Python Django Intern</h3>
+              <p class="timeline-subheading">Facein Technologies &bull; Kochi, Kerala (Remote)</p>
+              <ul class="experience-list">
+                <li><i class="fa-solid fa-check"></i> Developed web applications using Python and the Django framework.
+                </li>
+                <li><i class="fa-solid fa-check"></i> Designed and integrated backend functionalities with relational
+                  databases.</li>
+                <li><i class="fa-solid fa-check"></i> Performed systematic debugging and performance testing to enhance
+                  application speed and reliability.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Expertise Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Technical Arsenal</span>
+          <h2 class="section-title">Skills & <span class="gradient-text">Expertise</span></h2>
+          <p class="section-subtitle">
+            A balanced mix of programming languages, machine learning frameworks, web technologies, and interpersonal
+            abilities.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- AI & Machine Learning -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon icon-blue">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div>
+                <h3>AI, ML & Deep Learning</h3>
+                <p>Neural networks, NLP & speech processing</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag"><i class="fa-solid fa-microchip"></i> TensorFlow</span>
+              <span class="skill-tag"><i class="fa-solid fa-language"></i> BERT & NLP</span>
+              <span class="skill-tag"><i class="fa-solid fa-network-wired"></i> MLP Models</span>
+              <span class="skill-tag"><i class="fa-solid fa-waveform"></i> Wav2Vec2</span>
+              <span class="skill-tag"><i class="fa-solid fa-robot"></i> Machine Learning</span>
+              <span class="skill-tag"><i class="fa-solid fa-layer-group"></i> Deep Learning</span>
+            </div>
+          </div>
+
+          <!-- Programming & Backend -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon icon-green">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <div>
+                <h3>Programming & Backend</h3>
+                <p>Core logic, algorithms & web architecture</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="skill-tag"><i class="fa-solid fa-c"></i> C Programming</span>
+              <span class="skill-tag"><i class="fa-solid fa-server"></i> Django Framework</span>
+              <span class="skill-tag"><i class="fa-solid fa-network-wired"></i> Backend Architecture</span>
+              <span class="skill-tag"><i class="fa-solid fa-code"></i> Object-Oriented (OOP)</span>
+              <span class="skill-tag"><i class="fa-solid fa-bug"></i> Debugging & Testing</span>
+            </div>
+          </div>
+
+          <!-- Databases & Web Tech -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon icon-purple">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <div>
+                <h3>Databases & Web Technologies</h3>
+                <p>Structured data storage & modern presentation</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag"><i class="fa-solid fa-database"></i> MySQL</span>
+              <span class="skill-tag"><i class="fa-solid fa-table"></i> SQL Queries</span>
+              <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+              <span class="skill-tag"><i class="fa-solid fa-mobile-screen"></i> Responsive Layouts</span>
+              <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git Version Control</span>
+            </div>
+          </div>
+
+          <!-- IoT, Hardware & Soft Skills -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon icon-orange">
+                <i class="fa-solid fa-satellite-dish"></i>
+              </div>
+              <div>
+                <h3>IoT, Embedded & Strengths</h3>
+                <p>Sensors, telemetry & professional strengths</p>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag"><i class="fa-solid fa-microchip"></i> Arduino</span>
+              <span class="skill-tag"><i class="fa-solid fa-temperature-three-quarters"></i> DHT11 Sensor</span>
+              <span class="skill-tag"><i class="fa-solid fa-smog"></i> MQ135 Gas Sensor</span>
+              <span class="skill-tag"><i class="fa-solid fa-location-crosshairs"></i> GPS Modules</span>
+              <span class="skill-tag"><i class="fa-solid fa-users"></i> Leadership & Teamwork</span>
+              <span class="skill-tag"><i class="fa-solid fa-lightbulb"></i> Problem Solving</span>
+              <span class="skill-tag"><i class="fa-solid fa-clock"></i> Time Management</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages Spoken & Proficiency -->
+        <div class="competency-container">
+          <div class="skills-split-footer">
+            <div class="competency-subcol">
+              <h3 class="competency-title"><i class="fa-solid fa-chart-simple"></i> Core Competencies</h3>
+              <div class="competency-grid">
+                <div class="competency-item">
+                  <div class="competency-info">
+                    <span>Python & Django Backend</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill" style="width: 90%;"></div>
+                  </div>
+                </div>
+                <div class="competency-item">
+                  <div class="competency-info">
+                    <span>Machine Learning & NLP (BERT, Wav2Vec2)</span>
+                    <span>88%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill" style="width: 88%;"></div>
+                  </div>
+                </div>
+                <div class="competency-item">
+                  <div class="competency-info">
+                    <span>Relational Database Management (MySQL/SQL)</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                  </div>
+                </div>
+                <div class="competency-item">
+                  <div class="competency-info">
+                    <span>IoT & Sensor Integration (Arduino, GPS)</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="languages-subcol">
+              <h3 class="competency-title"><i class="fa-solid fa-globe"></i> Languages Known</h3>
+              <div class="language-cards">
+                <div class="lang-item">
+                  <div class="lang-flag"><i class="fa-solid fa-comments"></i></div>
+                  <div>
+                    <strong>English</strong>
+                    <span>Professional Working Proficiency</span>
+                  </div>
+                </div>
+                <div class="lang-item">
+                  <div class="lang-flag"><i class="fa-solid fa-comments"></i></div>
+                  <div>
+                    <strong>Malayalam</strong>
+                    <span>Native / Full Fluency</span>
+                  </div>
+                </div>
+                <div class="lang-item">
+                  <div class="lang-flag"><i class="fa-solid fa-comments"></i></div>
+                  <div>
+                    <strong>Tamil</strong>
+                    <span>Conversational Basics</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Hands-on Engineering</span>
+          <h2 class="section-title">Key <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">
+            Innovative solutions developed using cutting-edge Deep Learning architectures, IoT hardware, and Django web
+            frameworks.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="ai">AI & Deep Learning</button>
+          <button class="filter-btn" data-filter="iot">IoT & Hardware</button>
+          <button class="filter-btn" data-filter="web">Web & Django</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <!-- Project 1: Real-Time Stuttered Speech-to-Text -->
+          <article class="project-card featured-project-card" data-category="ai">
+            <div class="project-preview preview-gradient-1">
+              <div class="preview-overlay">
+                <span class="preview-tag">AI &bull; NLP &bull; Research 2026</span>
+                <i class="fa-solid fa-microphone-lines preview-icon"></i>
+              </div>
+            </div>
+            <div class="project-details">
+              <div class="project-meta">
+                <span class="badge">TensorFlow</span>
+                <span class="badge">BERT</span>
+                <span class="badge">MLP</span>
+                <span class="badge">Wav2Vec2</span>
+                <span class="badge">Django</span>
+                <span class="badge">NLP</span>
+              </div>
+              <h3 class="project-title">Real-Time Stuttered Speech-to-Text System</h3>
+              <p class="project-desc">
+                An advanced AI-based speech processing system engineered to detect and convert stuttered speech into
+                grammatically fluent text in real time.
+              </p>
+              <ul class="project-bullet-points">
+                <li><i class="fa-solid fa-circle-check"></i> Implemented deep learning architectures (MLP & BERT) with
+                  TensorFlow for disfluency detection.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Applied NLP techniques for voice-to-text conversion and
+                  contextual grammatical correction.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Built a high-performance Django web application supporting
+                  low-latency processing and personalization.</li>
+                <li><i class="fa-solid fa-award"></i> Presented at ICTEST-2026, Govt. Model Engineering College, Kochi.
+                </li>
+              </ul>
+              <div class="project-links">
+                <a href="#certifications" class="project-link">
+                  <i class="fa-solid fa-book-open"></i> Conference Paper Details
+                </a>
+                <a href="mailto:sayandhana1234@gmail.com?subject=Inquiry regarding Speech-to-Text System"
+                  class="project-link">
+                  <i class="fa-solid fa-envelope"></i> Request Demo & Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Child Safety Monitoring IoT -->
+          <article class="project-card" data-category="iot">
+            <div class="project-preview preview-gradient-2">
+              <div class="preview-overlay">
+                <span class="preview-tag">IoT &bull; Smart Safety 2025</span>
+                <i class="fa-solid fa-shield-cat preview-icon"></i>
+              </div>
+            </div>
+            <div class="project-details">
+              <div class="project-meta">
+                <span class="badge">Arduino</span>
+                <span class="badge">DHT11</span>
+                <span class="badge">MQ135</span>
+                <span class="badge">GPS</span>
+                <span class="badge">Embedded IoT</span>
+              </div>
+              <h3 class="project-title">Child Safety Monitoring System Using IoT</h3>
+              <p class="project-desc">
+                Designed and implemented a safety monitoring prototype for enclosed environments with automated sensor
+                telemetry and real-time location broadcast.
+              </p>
+              <ul class="project-bullet-points">
+                <li><i class="fa-solid fa-circle-check"></i> Integrated environmental sensors (DHT11
+                  temperature/humidity, MQ135 air quality) & GPS module for real-time telemetry.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Developed an alert mechanism to detect hazardous gas levels
+                  and abnormal temperature spikes.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Enhanced child safety with continuous remote environmental
+                  tracking and exact coordinates.</li>
+                <li><i class="fa-solid fa-award"></i> Presented at International Conference on Innovations in ASIET
+                  Kalady, 2025.</li>
+              </ul>
+              <div class="project-links">
+                <a href="#certifications" class="project-link">
+                  <i class="fa-solid fa-book-open"></i> Conference Paper
+                </a>
+                <a href="mailto:sayandhana1234@gmail.com?subject=Inquiry regarding IoT Safety System"
+                  class="project-link">
+                  <i class="fa-solid fa-envelope"></i> Project Details
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Python Django Backend Application -->
+          <article class="project-card" data-category="web">
+            <div class="project-preview preview-gradient-3">
+              <div class="preview-overlay">
+                <span class="preview-tag">Web &bull; Backend Architecture</span>
+                <i class="fa-solid fa-server preview-icon"></i>
+              </div>
+            </div>
+            <div class="project-details">
+              <div class="project-meta">
+                <span class="badge">Python</span>
+                <span class="badge">Django</span>
+                <span class="badge">MySQL</span>
+                <span class="badge">HTML5</span>
+                <span class="badge">CSS3</span>
+              </div>
+              <h3 class="project-title">Django Database & Web Application Suite</h3>
+              <p class="project-desc">
+                Scalable web application developed during internship at Facein Technologies, featuring robust relational
+                data modeling and optimized query performance.
+              </p>
+              <ul class="project-bullet-points">
+                <li><i class="fa-solid fa-circle-check"></i> Developed clean MVC architecture with secure user
+                  authentication and session management.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Designed relational database schemas in MySQL with
+                  optimized SQL indexing.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Implemented rigorous debugging and automated test suites to
+                  ensure zero downtime.</li>
+              </ul>
+              <div class="project-links">
+                <a href="#contact" class="project-link">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Architecture Overview
+                </a>
+                <a href="mailto:sayandhana1234@gmail.com" class="project-link">
+                  <i class="fa-solid fa-code"></i> Request Code Walkthrough
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Conference Presentations Section -->
+    <section class="section cert-section" id="certifications">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Credentials & Research</span>
+          <h2 class="section-title">Certifications & <span class="gradient-text">Conferences</span></h2>
+          <p class="section-subtitle">
+            Formal certifications from premier institutions and peer-reviewed conference presentations.
+          </p>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Cert 1 -->
+          <div class="cert-card highlight-cert">
+            <div class="cert-icon-wrapper">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <div class="cert-content">
+              <span class="cert-issuer">IIT Ropar &bull; NPTEL</span>
+              <h3 class="cert-title">Deep Learning — NPTEL Elite Certification</h3>
+              <p class="cert-desc">
+                Rigorous training covering deep neural networks, backpropagation, CNNs, RNNs, optimization algorithms,
+                and practical implementation.
+              </p>
+              <div class="cert-badge-tag"><i class="fa-solid fa-medal"></i> Elite Certification</div>
+            </div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="cert-content">
+              <span class="cert-issuer">Infosys Springboard</span>
+              <h3 class="cert-title">Machine Learning Fundamentals</h3>
+              <p class="cert-desc">
+                Foundational concepts of supervised and unsupervised machine learning, regression, classification,
+                clustering, and data preprocessing.
+              </p>
+              <div class="cert-badge-tag"><i class="fa-solid fa-circle-check"></i> Verified Credential</div>
+            </div>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="cert-card">
+            <div class="cert-icon-wrapper">
+              <i class="fa-solid fa-shield-virus"></i>
+            </div>
+            <div class="cert-content">
+              <span class="cert-issuer">ICT Academy</span>
+              <h3 class="cert-title">Junior Cybersecurity Analyst</h3>
+              <p class="cert-desc">
+                Core cybersecurity principles, threat detection, network security defense mechanisms, security
+                protocols, and incident response.
+              </p>
+              <div class="cert-badge-tag"><i class="fa-solid fa-circle-check"></i> Industry Certified</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conference Presentations -->
+        <div class="publications-wrapper">
+          <h3 class="publications-title"><i class="fa-solid fa-chalkboard-user"></i> Conference Presentations &
+            Publications</h3>
+
+          <div class="pub-card">
+            <div class="pub-badge">July 2026</div>
+            <div class="pub-details">
+              <h4>"Real-Time Stuttered Speech-to-Text Conversion Using Machine Learning and MLP"</h4>
+              <p class="pub-venue">
+                <i class="fa-solid fa-building-columns"></i> <strong>ICTEST-2026</strong> &bull; Govt. Model Engineering
+                College, Kochi, Kerala
+              </p>
+              <p class="pub-desc">
+                Presented novel research on combining deep learning (MLP) and transformer representations to accurately
+                classify disfluencies in stuttered audio streams for real-time speech remediation.
+              </p>
+            </div>
+          </div>
+
+          <div class="pub-card">
+            <div class="pub-badge">April 2025</div>
+            <div class="pub-details">
+              <h4>"Child Safety Monitoring System Using IoT"</h4>
+              <p class="pub-venue">
+                <i class="fa-solid fa-building-columns"></i> <strong>International Conference on Innovations in
+                  Mechanical, Robotics, Computing and Biomedical Engineering</strong> &bull; ASIET Kalady
+              </p>
+              <p class="pub-desc">
+                Authored and presented research on an autonomous multi-sensor telemetry system integrating Arduino,
+                DHT11, MQ135, and GPS modules for automated hazard notification in vehicle and enclosed environments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Value Proposition</span>
+          <h2 class="section-title">Services & <span class="gradient-text">Offerings</span></h2>
+          <p class="section-subtitle">
+            Leveraging specialized training in AI, Python development, and smart hardware to deliver high-quality
+            technical outcomes.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3 class="service-title">AI & Deep Learning Solutions</h3>
+            <p class="service-desc">
+              Developing custom machine learning and deep learning pipelines with TensorFlow, BERT, and MLP for text,
+              speech, and predictive intelligence.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Speech processing & NLP models</li>
+              <li><i class="fa-solid fa-check"></i> Disfluency and pattern detection</li>
+              <li><i class="fa-solid fa-check"></i> Model training, tuning, and evaluation</li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <h3 class="service-title">Python & Django Web Development</h3>
+            <p class="service-desc">
+              Building secure, scalable, and modular web backends and RESTful endpoints using Python and the Django
+              framework.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Clean MVC / MVT architecture</li>
+              <li><i class="fa-solid fa-check"></i> Database ORM integration</li>
+              <li><i class="fa-solid fa-check"></i> Fast latency & debugging optimization</li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3 class="service-title">IoT & Smart Embedded Systems</h3>
+            <p class="service-desc">
+              Prototyping sensor-driven Internet of Things systems with microcontrollers, real-time telemetry, and
+              location tracking.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Arduino microcontroller programming</li>
+              <li><i class="fa-solid fa-check"></i> Multi-sensor calibration (DHT11, MQ135)</li>
+              <li><i class="fa-solid fa-check"></i> GPS tracking & threshold-based alerts</li>
+            </ul>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h3 class="service-title">Database Design & SQL Optimization</h3>
+            <p class="service-desc">
+              Designing relational database schemas, writing optimized SQL queries, and ensuring data integrity with
+              MySQL.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Relational database schema design</li>
+              <li><i class="fa-solid fa-check"></i> Indexing and query performance</li>
+              <li><i class="fa-solid fa-check"></i> Data migration and consistency checks</li>
+            </ul>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3 class="service-title">Cybersecurity Vulnerability Audit</h3>
+            <p class="service-desc">
+              Evaluating web application hygiene, analyzing threat vectors, and implementing defense-in-depth security
+              best practices.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Application security hygiene assessment</li>
+              <li><i class="fa-solid fa-check"></i> Junior Cybersecurity Analyst certified</li>
+              <li><i class="fa-solid fa-check"></i> Mitigation of common web vulnerabilities</li>
+            </ul>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card">
+            <div class="service-icon-wrapper">
+              <i class="fa-solid fa-book-bookmark"></i>
+            </div>
+            <h3 class="service-title">Technical Research & Documentation</h3>
+            <p class="service-desc">
+              Rigorous research formulation, academic writing, empirical testing, and paper presentation for conferences
+              and technical publications.
+            </p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Conference paper preparation & formatting</li>
+              <li><i class="fa-solid fa-check"></i> Empirical benchmark data visualization</li>
+              <li><i class="fa-solid fa-check"></i> Clear technical documentation & reporting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">
+            Seeking to contribute technical expertise and innovation in a challenging technology-focused role. Let's
+            discuss how I can bring value to your team.
+          </p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Left: Contact Details -->
+          <div class="contact-info-panel">
+            <h3 class="panel-title">Let's connect & collaborate</h3>
+            <p class="panel-desc">
+              Feel free to reach out for full-time opportunities, AI/Django projects, academic research inquiries, or
+              technical consultations.
+            </p>
+
+            <div class="contact-cards">
+              <div class="contact-info-card">
+                <div class="info-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="info-content">
+                  <span class="info-label">Direct Email</span>
+                  <a href="mailto:sayandhana1234@gmail.com" class="info-value">sayandhana1234@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="info-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="info-content">
+                  <span class="info-label">Mobile Phone</span>
+                  <a href="tel:+917034774514" class="info-value">+91-7034774514</a>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="info-icon">
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="info-content">
+                  <span class="info-label">LinkedIn</span>
+                  <a href="https://linkedin.com/in/sayandhana-ks" target="_blank" rel="noopener noreferrer"
+                    class="info-value">linkedin.com/in/sayandhana-ks</a>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="info-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="info-content">
+                  <span class="info-label">Location</span>
+                  <span class="info-value">Kalady / Kochi, Kerala, India (Open to Relocation & Remote)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-box">
+              <span class="social-box-title">Social & Professional Channels:</span>
+              <div class="social-icons">
+                <a href="https://linkedin.com/in/sayandhana-ks" target="_blank" rel="noopener noreferrer"
+                  class="social-circle" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:sayandhana1234@gmail.com" class="social-circle" aria-label="Email"><i
+                    class="fa-solid fa-envelope"></i></a>
+                <a href="tel:+917034774514" class="social-circle" aria-label="Call"><i
+                    class="fa-solid fa-phone"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <div class="contact-form-panel">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name <span class="required">*</span></label>
+                  <div class="input-container">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" id="name" name="name" placeholder="Your Name or Recruiter Name" required />
+                  </div>
+                  <span class="error-msg" id="name-error">Please enter your name</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Your Email <span class="required">*</span></label>
+                  <div class="input-container">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" id="email" name="email" placeholder="recruiter@company.com" required />
+                  </div>
+                  <span class="error-msg" id="email-error">Please enter a valid email address</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject <span class="required">*</span></label>
+                <div class="input-container">
+                  <i class="fa-regular fa-bookmark input-icon"></i>
+                  <input type="text" id="subject" name="subject" placeholder="Job Opportunity / Project Collaboration"
+                    required />
+                </div>
+                <span class="error-msg" id="subject-error">Please enter a subject</span>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message <span class="required">*</span></label>
+                <div class="input-container textarea-container">
+                  <i class="fa-regular fa-comment-dots input-icon textarea-icon"></i>
+                  <textarea id="message" name="message" rows="5"
+                    placeholder="Write your message, interview invitation, or project details..." required></textarea>
+                </div>
+                <span class="error-msg" id="message-error">Please enter your message (at least 10 characters)</span>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
+                <span>Send Message to Sayandhana</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast">
+    <i class="fa-solid fa-circle-check toast-icon"></i>
+    <div class="toast-content">
+      <strong id="toast-title">Message Sent!</strong>
+      <p id="toast-message">Thank you! Sayandhana will get back to you shortly.</p>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo">
+            <span class="logo-accent">&lt;</span>Sayandhana KS<span class="logo-accent">/&gt;</span>
+          </a>
+          <p class="footer-motto">
+            Computer Science & Artificial Intelligence Graduate | Python, Machine Learning & IoT Engineer.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About & Education</a></li>
+            <li><a href="#skills">Skills & Expertise</a></li>
+            <li><a href="#projects">Key Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-services">
+          <h4>Focus Areas</h4>
+          <ul>
+            <li><a href="#skills">Artificial Intelligence & Deep Learning</a></li>
+            <li><a href="#skills">Python & Django Development</a></li>
+            <li><a href="#skills">IoT & Embedded Telemetry</a></li>
+            <li><a href="#skills">MySQL Database Architecture</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Sayandhana KS. All rights reserved.</p>
+        <p class="footer-credits">
+          Engineered with <i class="fa-solid fa-heart heart-pulse"></i> &bull; Adi Shankara College of Engineering and
+          Technology
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
