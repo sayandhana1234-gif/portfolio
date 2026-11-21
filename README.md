@@ -13,6 +13,7 @@ A tailored, high-performance personal portfolio website built with modern HTML5,
 - **Phone**: +91-7034774514
 - **Email**: sayandhana1234@gmail.com
 - **LinkedIn**: [linkedin.com/in/sayandhana-ks](https://linkedin.com/in/sayandhana-ks)
+- **GitHub**: [github.com/sayandhana1234-gif](https://github.com/sayandhana1234-gif)
 - **Languages**: English, Malayalam, Tamil
 
 ---
