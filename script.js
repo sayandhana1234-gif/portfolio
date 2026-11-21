@@ -218,18 +218,50 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
         const originalContent = submitBtn.innerHTML;
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending...</span>';
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending to Email...</span>';
 
-        setTimeout(() => {
+        // Send real email directly to sayandhana1234@gmail.com via FormSubmit
+        fetch('https://formsubmit.co/ajax/sayandhana1234@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            Sender_Name: nameInput.value.trim(),
+            Sender_Email: emailInput.value.trim(),
+            Subject: subjectInput.value.trim(),
+            Message: messageInput.value.trim(),
+            _subject: `New Message on Portfolio from ${nameInput.value.trim()}`
+          })
+        })
+        .then(response => {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalContent;
-
-          showToast('Message Sent!', 'Thank you! Sayandhana will get back to you shortly.', true);
+          showToast('Message Sent!', 'Delivered directly to sayandhana1234@gmail.com. Check your inbox!', true);
           contactForm.reset();
-        }, 1200);
+        })
+        .catch(error => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalContent;
+          // Fallback to standard form post
+          contactForm.submit();
+        });
       } else {
         showToast('Validation Error', 'Please complete all required fields correctly.', false);
       }
     });
   }
+
+  // --- 7. Email Click Helper: Open Gmail Web & Copy Address ---
+  const emailLinks = document.querySelectorAll('.email-click-link');
+  emailLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText('sayandhana1234@gmail.com').then(() => {
+          showToast('Opening Gmail', 'Email copied to clipboard: sayandhana1234@gmail.com', true);
+        });
+      }
+    });
+  });
 });
