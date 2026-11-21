@@ -1,11 +1,10 @@
 /**
- * Sayandhana KS Portfolio - Interactive Script
- * Features: Dark/Light Mode, Typewriter Effect, Project Filtering,
- * Form Validation & Toast, Active Nav Scrollspy, Mobile Hamburger Menu.
+ * Sayandhana KS Portfolio - Clean & Professional Interactive Script
+ * Features: Dark/Light Mode, Mobile Navigation, Scrollspy, Form Validation.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // --- 1. Current Year ---
+  // --- 1. Dynamic Footer Year ---
   const yearEl = document.getElementById('current-year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
@@ -16,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
   const savedTheme = localStorage.getItem('sayandhana-theme');
 
-  // Check saved theme or user OS preference
+  // Check saved theme or OS preference
   if (savedTheme === 'light' || (!savedTheme && window.matchMedia('(prefers-color-scheme: light)').matches)) {
     document.body.classList.add('light-theme');
     if (themeIcon) {
@@ -54,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.classList.toggle('open');
     });
 
-    // Close mobile menu when clicking a link
+    // Close mobile menu on link click
     navItems.forEach(item => {
       item.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -79,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset;
 
-    // Navbar shadow & padding change
-    if (scrollY > 50) {
+    // Navbar shadow on scroll
+    if (scrollY > 40) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
@@ -95,10 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Scrollspy navigation highlight
+    // Scrollspy active section indicator
     sections.forEach(current => {
       const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 130;
+      const sectionTop = current.offsetTop - 120;
       const sectionId = current.getAttribute('id');
       const navLink = document.querySelector(`.nav-link[href*="${sectionId}"]`);
 
@@ -122,72 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 5. Hero Typewriter Effect (Tailored to Sayandhana's Skills) ---
-  const typewriterEl = document.getElementById('typewriter');
-  if (typewriterEl) {
-    const phrases = [
-      'Artificial Intelligence & ML',
-      'Python & Django Web Systems',
-      'Speech NLP Models (BERT & Wav2Vec2)',
-      'Smart IoT & Sensor Systems'
-    ];
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typeSpeed = 90;
-
-    function typeEffect() {
-      const currentPhrase = phrases[phraseIndex];
-
-      if (isDeleting) {
-        typewriterEl.textContent = currentPhrase.substring(0, charIndex - 1);
-        charIndex--;
-        typeSpeed = 45;
-      } else {
-        typewriterEl.textContent = currentPhrase.substring(0, charIndex + 1);
-        charIndex++;
-        typeSpeed = 85;
-      }
-
-      if (!isDeleting && charIndex === currentPhrase.length) {
-        isDeleting = true;
-        typeSpeed = 1800; // Pause at end of word
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        typeSpeed = 350; // Pause before typing new word
-      }
-
-      setTimeout(typeEffect, typeSpeed);
-    }
-
-    typeEffect();
-  }
-
-  // --- 6. Project Filter Functionality ---
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      const filterValue = button.getAttribute('data-filter');
-
-      projectCards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        if (filterValue === 'all' || cardCategory === filterValue) {
-          card.classList.remove('hide');
-          card.style.animation = 'fadeIn 0.5s ease forwards';
-        } else {
-          card.classList.add('hide');
-        }
-      });
-    });
-  });
-
-  // --- 7. Contact Form Validation & Submission ---
+  // --- 5. Contact Form Validation & Submission ---
   const contactForm = document.getElementById('contact-form');
   const submitBtn = document.getElementById('submit-btn');
   const toast = document.getElementById('toast');
