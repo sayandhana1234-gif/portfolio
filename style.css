@@ -1257,6 +1257,13 @@ body.light-theme .navbar {
   display: block;
 }
 
+.form-actions-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
 /* --- Toast Notification --- */
 .toast {
   position: fixed;

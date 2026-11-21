@@ -206,8 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
       const isNameValid = validateField(nameInput, nameInput.value.trim().length >= 2);
@@ -215,45 +213,33 @@ document.addEventListener('DOMContentLoaded', () => {
       const isSubjectValid = validateField(subjectInput, subjectInput.value.trim().length >= 3);
       const isMessageValid = validateField(messageInput, messageInput.value.trim().length >= 10);
 
-      if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
-        const originalContent = submitBtn.innerHTML;
+      if (!isNameValid || !isEmailValid || !isSubjectValid || !isMessageValid) {
+        e.preventDefault();
+        showToast('Validation Error', 'Please complete all required fields correctly.', false);
+      } else {
+        // Allow standard POST submission to FormSubmit so it sends real email directly to sayandhana1234@gmail.com
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending to Email...</span>';
-
-        // Send real email directly to sayandhana1234@gmail.com via FormSubmit
-        fetch('https://formsubmit.co/ajax/sayandhana1234@gmail.com', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify({
-            Sender_Name: nameInput.value.trim(),
-            Sender_Email: emailInput.value.trim(),
-            Subject: subjectInput.value.trim(),
-            Message: messageInput.value.trim(),
-            _subject: `New Message on Portfolio from ${nameInput.value.trim()}`
-          })
-        })
-        .then(response => {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalContent;
-          showToast('Message Sent!', 'Delivered directly to sayandhana1234@gmail.com. Check your inbox!', true);
-          contactForm.reset();
-        })
-        .catch(error => {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalContent;
-          // Fallback to standard form post
-          contactForm.submit();
-        });
-      } else {
-        showToast('Validation Error', 'Please complete all required fields correctly.', false);
       }
     });
+
+    // --- 7. Compose in Gmail Directly Button ---
+    const gmailBtn = document.getElementById('gmail-direct-btn');
+    if (gmailBtn) {
+      gmailBtn.addEventListener('click', () => {
+        const subject = encodeURIComponent(subjectInput.value.trim() || 'Inquiry from Portfolio');
+        let bodyText = messageInput.value.trim();
+        if (nameInput.value.trim() || emailInput.value.trim()) {
+          bodyText += `\n\n---\nSent by: ${nameInput.value.trim()} (${emailInput.value.trim()})`;
+        }
+        const body = encodeURIComponent(bodyText);
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=sayandhana1234@gmail.com&su=${subject}&body=${body}`;
+        window.open(gmailUrl, '_blank');
+      });
+    }
   }
 
-  // --- 7. Email Click Helper: Open Gmail Web & Copy Address ---
+  // --- 8. Email Click Helper: Open Gmail Web & Copy Address ---
   const emailLinks = document.querySelectorAll('.email-click-link');
   emailLinks.forEach(link => {
     link.addEventListener('click', () => {
