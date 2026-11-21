@@ -1,6 +1,6 @@
 /**
  * Sayandhana KS Portfolio - Clean & Professional Interactive Script
- * Features: Dark/Light Mode, Mobile Navigation, Scrollspy, Form Validation.
+ * Features: Dark/Light Mode, Mobile Navigation, Smooth Anchor Scrolling, Form Validation.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -42,7 +42,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 3. Mobile Navigation Hamburger Menu ---
+  // --- 3. Reliable Smooth Scrolling for All Internal Anchor Links (including "Get In Touch") ---
+  const internalLinks = document.querySelectorAll('a[href^="#"]');
+  internalLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          // Update URL hash without abrupt jumping
+          if (history.pushState) {
+            history.pushState(null, null, targetId);
+          } else {
+            location.hash = targetId;
+          }
+        }
+      }
+    });
+  });
+
+  // --- 4. Mobile Navigation Hamburger Menu ---
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
   const navItems = document.querySelectorAll('.nav-link');
@@ -70,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 4. Sticky Navbar & Scrollspy ---
+  // --- 5. Sticky Navbar & Scrollspy ---
   const navbar = document.getElementById('navbar');
   const sections = document.querySelectorAll('section[id]');
   const backToTopBtn = document.getElementById('back-to-top');
@@ -121,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 5. Contact Form Validation & Submission ---
+  // --- 6. Contact Form Validation & Submission ---
   const contactForm = document.getElementById('contact-form');
   const submitBtn = document.getElementById('submit-btn');
   const toast = document.getElementById('toast');
